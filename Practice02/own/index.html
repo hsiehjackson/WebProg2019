@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Viewer</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    </head>
+    <body>
+        <div class="image-viewer__container">
+            <div class="image-viewer__title">
+                <p>Image Viewer</p>        
+            </div>
+            <p class="blink">Press Left/Right ArrowKey</p>
+            <br><p class="blink">Click Left/Right Icon</p>   
+            <div class="image-viewer__main">
+                <div class="image-viewer__button" id="back">
+                    <img src="images/back.png" class="disabled">
+                </div>
+                <div class="image-viewer__display" id="target">
+                    <img id=display src="images/pizza01.jpg">
+                    <div class="image-viewer__display-source-wrapper">
+                        <p id=source>Source:https://img.buzzfeed.com/thumbnailer-prod-us-east-1/dc23cd051d2249a5903d25faf8eeee4c/BFV36537_CC2017_2IngredintDough4Ways-FB.jpg</p>
+                    </div>
+                </div>
+                <div class="image-viewer__button" id="next">
+                    <img src="images/next.png">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>
