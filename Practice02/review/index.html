@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Viewer</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="./styles.css" />
+        <script src="main.js"></script>
+    </head>
+    <body>
+    <!-- Try to implement an HTML that looks like the reference example:
+         https://github.com/ric2k1/ric2k1.github.io/blob/master/W2_0227/practice/img_viewer_begin/images/screenshot.png  -->
+    <!-- Please use the class names and IDs as defined in styles.css
+         so that the outlook can be the same as the reference. -->
+         <div class="image-viewer__container">            
+            <span class="image-viewer__title">Image Viewer</span>
+            <span class="image-viewer__main"> 
+                <span id="b1" class="image-viewer__button disabled" onclick="previous()"><img src="./images/back.png"></span>
+                <span class="image-viewer__display">
+                    <span class="image-viewer__display"><img id="display" src="./images/pizza01.jpg">Source:</span>
+                    <span id="source" class="image-viewer__display-source-wrapper"></span>    
+                </span>
+                <span id="b2" class="image-viewer__button" onclick="next()"><img src="./images/next.png"></span>
+            </span>    
+         </div>
+    </body>
+</html>
