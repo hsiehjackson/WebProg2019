@@ -101,6 +101,13 @@ body {
 	cursor: not-allowed;
 }
 
+.hint{
+	font-size: 1.5rem;
+	font-weight: 200;
+	color: red;
+	margin: 0;
+}
+
 @-webkit-keyframes blinker {
   from {opacity: 1.0;}
   to {opacity: 0.0;}
