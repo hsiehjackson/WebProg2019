@@ -5,8 +5,10 @@ var display_state = 0;
 
 input.addEventListener('keyup', event => {
 	const value = event.target.value.trim();
+	var date = document.getElementById("todo-input-time").value;
+	if (date == ""){date="no date";}
 	if (event.keyCode === 13 &&  value!== ''){
-		const newItem = new createItem(todoitems.length,value);
+		const newItem = new createItem(todoitems.length,value,date);
 		if (todoitems.length == 0){
 			const footerNode = document.getElementById("todo_footer");
 			footerNode.removeAttribute("style");
@@ -23,13 +25,21 @@ input.addEventListener('keyup', event => {
 			//listNode.appendChild(newItem.node);
 		}
 		event.target.value = "";
+		document.getElementById("todo-input-time").value="";
+		todoitems.sort(function(a,b){return a.time- b.time});
+		todoitems.forEach(function(item, index) {
+  		item.node.getElementsByTagName("h1")[0].setAttribute("id","text"+index);
+  		item.node.getElementsByTagName("img")[0].setAttribute("id","img"+index);
+  		item.node.getElementsByTagName("input")[0].setAttribute("id",index);
+  		item.node.getElementsByTagName("label")[0].setAttribute("for",index);
+		});
 	display_count();
 	display_clear();
 	display_item();
 	}
 });
 
-function createItem(id, name) {
+function createItem(id, name, date) {
 	const itemNode = document.createElement("li");
 	itemNode.setAttribute("class","todo-app__item");
 	
@@ -55,13 +65,22 @@ function createItem(id, name) {
 	text.setAttribute("id","text"+id);
 	text.innerHTML = name;
 
+	const time = document.createElement("P");
+	time.setAttribute("class","todo-app__item-time");
+	time.innerHTML = date;
+
 	checkbox.appendChild(checkinput);
 	checkbox.appendChild(checklabel);
 	itemNode.appendChild(checkbox);
+	itemNode.appendChild(time);
 	itemNode.appendChild(text);
 	itemNode.appendChild(image);
 
-	const newItem = {node: itemNode, isComplete: false};
+	if (date=="no date")
+		var d = new Date("2100-01-01");
+	else
+		var d = new Date(date);
+	const newItem = {node: itemNode, isComplete: false, time:d};
 	return newItem;
 }
 
@@ -214,4 +233,18 @@ function display_clear(){
 
 function display_count(){
 	todoCount.innerHTML = todoitems.filter(ele => !ele.isComplete).length + " left";
+}
+
+function getDate(){
+	var Today = new Date();
+	const m = Today.getMonth()+1;
+	const d = Today.getDate();
+	const h = Today.getHours();
+	const min = Today.getMinutes();
+	var time = m+"/"+d+" "+h+":"+min;
+	return time
+}
+
+function sortDate(){
+
 }

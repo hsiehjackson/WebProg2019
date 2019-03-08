@@ -17,7 +17,19 @@
     			<h1 class="todo-app__title">todos</h1>
     		</header>
     		<section class="todo-app__main" id="todo-main">
-    			<input type="text" placeholder="What needs to be done?" class="todo-app__input" id="todo-input" >
+    			<input type="text" placeholder="What needs to be done? (please give date for priority)" class="todo-app__input" id="todo-input">
+                <input type="date" class="todo-app__input-time" id="todo-input-time" min="2019-01-01" max="2099-12-31" >
+                <!--ul class="todo-app__list">
+                    <li class="todo-app__item">
+                        <div class="todo-app__checkbox">
+                            <input type="checkbox" onclick="clickcomplete()">
+                            <label for="0"></label>
+                        </div>
+                        <p class="todo-app__item-time">2019-02-03</p>
+                        <h1 class="todo-app__item-detail">todo1</h1>
+
+                        <img class="todo-app__item-x" scr="./img/x.png" onclick="=clickdelete()">
+                </ul-->
     		</section>
     		<footer id="todo_footer" class="todo-app__footer" style="visibility: hidden">
     			<div class="todo-app__total" id="todo-count">0 left</div>
