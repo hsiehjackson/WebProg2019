@@ -234,17 +234,3 @@ function display_clear(){
 function display_count(){
 	todoCount.innerHTML = todoitems.filter(ele => !ele.isComplete).length + " left";
 }
-
-function getDate(){
-	var Today = new Date();
-	const m = Today.getMonth()+1;
-	const d = Today.getDate();
-	const h = Today.getHours();
-	const min = Today.getMinutes();
-	var time = m+"/"+d+" "+h+":"+min;
-	return time
-}
-
-function sortDate(){
-
-}
