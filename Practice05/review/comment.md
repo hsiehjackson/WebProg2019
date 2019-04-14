@@ -6,7 +6,7 @@
 尚可。
 1. 可以不用設每個數字的``click_number``，可以只設一個function，會根據當下的text value變化即可，同理``click_operation``也只需要寫一個，如下圖最後一行的function，吃當下value來設置就好。
 
-![](https://i.imgur.com/MwJKojy.png =400x250)
+![](https://i.imgur.com/MwJKojy.png)
 
 
 2. 不用特別把加減乘除的operation獨立成function吧 XD。
