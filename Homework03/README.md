@@ -11,10 +11,10 @@ How to use ?
 ---
 * Sign up for your own account and log in.
 * Administrator Account
-	* email:ADMIN
+	* email：ADMIN
 	* password：ADMIN
 * Other User Account
-	* email:(jackson/Ric/annie)@example.com
+	* email：(jackson/Ric/annie)@example.com
 	* password：123
 
 Finished basic requirement
