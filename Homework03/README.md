@@ -1,10 +1,9 @@
 # WebProg2019 - Homework 3 - README
 
 
-Link
+Deployed Link
 ---
 * Heroku link：https://hsiehjackson-post-example.herokuapp.com/
-* The deployment may still has some bugs I cannot handle.
 
 How to start?
 ---
