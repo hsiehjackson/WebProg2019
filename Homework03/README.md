@@ -19,7 +19,7 @@ How to use ?
 	* email：ADMIN
 	* password：ADMIN
 * Other User Account
-	* email：(jackson/Ric/annie)@example.com
+	* email：(jackson/Ric/annie/eric)@example.com
 	* password：123
 
 Finished basic requirement
@@ -39,4 +39,4 @@ Finished advanced requirement
 
 Comments
 ---
-乾寫了六天，想完成deploy還是失敗QQ，cookies要有資訊有點難...
+乾寫了六天，ookies要有點難...
